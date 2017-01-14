@@ -1,0 +1,2407 @@
+do run
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed 213.652928
+script duration name:unknown120_60 seconds:214.0
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed 0
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed 0
+calculate duration
+testing...
+no interpolation path defined
+executed 0
+executed 0.0
+script duration name:co2 seconds:0.0
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed 4.0
+executed 4.0
+Script duration 214.0
+Run total estimated duration= 215.000
+run duration: 0:03:35
+doing event level: 2
+14:13:54 -- Setting default integration. t=1.048576
+setting integration time = 1.048576
+SetIntegrationTime 1.048576 ===>> OK
+----------------- start -----------------
+**************** Experiment Type: Ar/Ar, Ar/Ar
+create new session 4417786896
+close session 4417786896
+$$$$$ Clearing conditionals
+adding conditionals 
+Add queue conditionals
+add default conditionals
+adding default conditionals from /Users/jan/PychronDev/setupfiles/spectrometer/default_conditionals.yaml
+Start automated run 65529-05
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+%%%%%%%%%%%%%%%%%% setting automated run 65529-05
+No value "sensitivity_multiplier" in metadata
+$$$$$$$$$$$$$$$ auto_save_detector_ic=False
+============================= Pre Extraction Check =============================
+loading queue conditionals pre_run_terminations
+loading system conditionals pre_run_terminations
+loading conditionals from /Users/jan/PychronDev/setupfiles/spectrometer/default_conditionals.yaml
+14:13:54 -- ******* Pre Extraction Check *******
+Get a measurement from the spectrometer
+GetData ===>> H2,-0.162306835703189,H1,0.0247284213758416,AX,0.0587915079899829,L1,0.0241121698632292,L2,0.0109...
+Pre Extraction Termination data. keys=H2,H1,AX,L1,L2,CDD, signals=-0.16231,0.02473,0.05879,0.02411,0.01094,0.00342
+14:13:54 -- testing system defined conditionals
+Checking default pre extraction terminations n=2
+testing CDD
+evaluate ot="CDD.inactive" t="CDD", ctx="{'CDD': False}"
+GetDeflection CDD ===>> 50
+testing CDD==2000
+evaluate ot="CDD.deflection==2000" t="CDD==2000", ctx="{'CDD': 50.0}"
+14:13:54 -- ******* Pre Extraction Check Passed *******
+=================================================================================
+14:13:54 -- stopping status monitor
+stop 4972300624
+Alive clients [4980890128]
+14:13:54 -- starting status monitor
+start 4972300624
+Monitor already running
+start extraction
+do extraction
+Analysis started at 14:13:54.133454
+Extraction Started jan_co2.py
+14:13:54 -- ******* Extraction Started jan_co2.py *******
+state changed from not run to extraction
+DO EXTRACTION <pychron.extraction_line.pyscript_runner.RemotePyScriptRunner object at 0x12ac74950>
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed 0
+calculate duration
+testing...
+no interpolation path defined
+executed 0
+executed 100.0
+Jan CO2 laser analysis
+doing GOSUB
+testing...
+no interpolation path defined
+executed 0
+Waiting for CO2 access
+wait ('FelixCO2Flag', 0) {}
+waiting for FelixCO2Flag = 0
+Read FelixCO2Flag ===>> 0
+finished waiting
+CO2 free
+wait ('CO2PumpTimeFlag', 0) {}
+waiting for CO2PumpTimeFlag = 0
+Read CO2PumpTimeFlag ===>> 0
+finished waiting
+acquire ('JanCO2Flag',) {'clear': True}
+acquire JanCO2Flag
+Set JanCO2Flag 1 ===>> OK
+JanCO2Flag acquired
+set extraction state False (0.75, 'red', 1.5)
+CO2 acquired
+executed 0
+WaitForCO2Access.py completed successfully
+gosub finished
+doing GOSUB
+testing...
+no interpolation path defined
+executed 0
+Prepare for CO2 analysis
+close () {'description': 'Jan Inlet'}
+closing name=--- desc=Jan Inlet
+checking ownership. requestor=129.138.12.150
+check software interlocks R
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel False
+Close R ===>> OK
+GetValveState R ===>> False
+change switch state (True, True)
+update switch state R False args=() kw={} ncanvase=2
+14:13:54 -- CLOSE  VALVE-R (Jan Inlet)
+---------------------------------------- close None (Jan Inlet) result=[(True, True)]
+action=close, ok=True, locked=[False]
+open () {'description': 'Jan Ion Pump'}
+opening name=--- desc=Jan Ion Pump
+checking ownership. requestor=129.138.12.150
+check software interlocks O
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open O ===>> OK
+GetValveState O ===>> OK
+change switch state (True, True)
+update switch state O True args=() kw={} ncanvase=2
+14:13:54 -- OPEN   VALVE-O (Jan Ion Pump)
+---------------------------------------- open None (Jan Ion Pump) result=[(True, True)], time=0.08 sec
+action=open, ok=True, locked=[False]
+close () {'description': 'Microbone to Minibone'}
+closing name=--- desc=Microbone to Minibone
+checking ownership. requestor=129.138.12.150
+check software interlocks L
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel False
+Close L ===>> OK
+GetValveState L ===>> False
+change switch state (True, True)
+update switch state L False args=() kw={} ncanvase=2
+14:13:55 -- CLOSE  VALVE-L (Microbone to Minibone)
+---------------------------------------- close None (Microbone to Minibone) result=[(True, True)]
+action=close, ok=True, locked=[False]
+open () {'description': 'Microbone to Turbo'}
+opening name=--- desc=Microbone to Turbo
+checking ownership. requestor=129.138.12.150
+check software interlocks U
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open U ===>> OK
+GetValveState U ===>> OK
+change switch state (True, True)
+update switch state U True args=() kw={} ncanvase=2
+14:13:55 -- OPEN   VALVE-U (Microbone to Turbo)
+---------------------------------------- open None (Microbone to Turbo) result=[(True, True)], time=0.11 sec
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Inlet Pipette'}
+opening name=--- desc=Microbone to Inlet Pipette
+checking ownership. requestor=129.138.12.150
+check software interlocks S
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open S ===>> OK
+GetValveState S ===>> OK
+change switch state (True, True)
+update switch state S True args=() kw={} ncanvase=2
+14:13:56 -- OPEN   VALVE-S (Microbone to Inlet Pipette)
+---------------------------------------- open None (Microbone to Inlet Pipette) result=[(True, True)], time=0.39 sec
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Getter D-50'}
+opening name=--- desc=Microbone to Getter D-50
+checking ownership. requestor=129.138.12.150
+check software interlocks K
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open K ===>> OK
+GetValveState K ===>> OK
+change switch state (True, True)
+update switch state K True args=() kw={} ncanvase=2
+14:13:57 -- OPEN   VALVE-K (Microbone to Getter D-50)
+---------------------------------------- open None (Microbone to Getter D-50) result=[(True, True)], time=0.38 sec
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Getter NP-10'}
+opening name=--- desc=Microbone to Getter NP-10
+checking ownership. requestor=129.138.12.150
+check software interlocks M
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open M ===>> OK
+GetValveState M ===>> OK
+change switch state (True, True)
+update switch state M True args=() kw={} ncanvase=2
+14:13:57 -- OPEN   VALVE-M (Microbone to Getter NP-10)
+---------------------------------------- open None (Microbone to Getter NP-10) result=[(True, True)], time=0.12 sec
+Get Checksum: -1965264452
+action=open, ok=True, locked=[False]
+close () {'description': 'CO2 Laser to Felix'}
+closing name=--- desc=CO2 Laser to Felix
+checking ownership. requestor=129.138.12.150
+check software interlocks F
+interlocks []
+actuate state mode=None-script, software_lock=True
+VALVE-F(CO2 Laser to Felix) software locked
+change switch state (True, False)
+---------------------------------------- close None (CO2 Laser to Felix) result=[(True, False)]
+action=close, ok=True, locked=[True]
+open () {'description': 'CO2 Laser to Jan'}
+opening name=--- desc=CO2 Laser to Jan
+checking ownership. requestor=129.138.12.150
+check software interlocks A
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open A ===>> OK
+GetValveState A ===>> OK
+change switch state (True, True)
+update switch state A True args=() kw={} ncanvase=2
+14:13:57 -- OPEN   VALVE-A (CO2 Laser to Jan)
+---------------------------------------- open None (CO2 Laser to Jan) result=[(True, True)], time=0.13 sec
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to CO2 Laser'}
+opening name=--- desc=Microbone to CO2 Laser
+checking ownership. requestor=129.138.12.150
+check software interlocks T
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open T ===>> OK
+GetValveState T ===>> OK
+change switch state (True, True)
+update switch state T True args=() kw={} ncanvase=2
+14:13:58 -- OPEN   VALVE-T (Microbone to CO2 Laser)
+---------------------------------------- open None (Microbone to CO2 Laser) result=[(True, True)], time=0.38 sec
+action=open, ok=True, locked=[False]
+executed 0
+PrepareForCO2Analysis.py completed successfully
+gosub finished
+set_motor ('beam', '1.25') {}
+setting motor "beam" to 1.25
+set motor beam to 1.25
+SetMotor beam,1.25 ===>> OK
+GetMotorMoving beam ===>> False
+GetMotorMoving beam ===>> False
+Block completed
+move_to_position ('106',) {'autocenter': True}
+FusionsCO2 move to position 106
+sending GoToHole 106,True
+GoToHole 106,True ===>> OK
+GetDriveMoving ===>> OK
+Get Checksum: -1965264452
+GetDriveMoving ===>> OK
+GetDriveMoving ===>> OK
+GetDriveMoving ===>> OK
+GetDriveMoving ===>> OK
+GetDriveMoving ===>> OK
+GetDriveMoving ===>> False
+GetDriveMoving ===>> False
+Block completed
+GetAutoCorrecting ===>> OK
+GetAutoCorrecting ===>> OK
+Get Checksum: -1965264452
+GetAutoCorrecting ===>> OK
+GetAutoCorrecting ===>> OK
+GetAutoCorrecting ===>> OK
+GetAutoCorrecting ===>> OK
+GetAutoCorrecting ===>> False
+GetAutoCorrecting ===>> False
+Block completed
+update position
+GetPosition ===>> -9.96950,0.00000,1.00000
+got position (-9.9695, 0.0, 1.0)
+move to position succeeded
+sleep (5,) {}
+SLEEP 5.0
+block started
+WaitControl setup for 5.0  
+Get Checksum: -1965264452
+Get Checksum: -1965264452
+Join finished
+block finished. duration 5.01706314087
+close () {'description': 'Microbone to Turbo'}
+closing name=--- desc=Microbone to Turbo
+checking ownership. requestor=129.138.12.150
+check software interlocks U
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel True
+Close U ===>> OK
+GetValveState U ===>> False
+change switch state (True, True)
+update switch state U False args=() kw={} ncanvase=2
+14:14:11 -- CLOSE  VALVE-U (Microbone to Turbo)
+---------------------------------------- close None (Microbone to Turbo) result=[(True, True)]
+action=close, ok=True, locked=[False]
+enable laser
+enable () {}
+set extraction state FusionsCO2 Enabled (False, 'red', 1.5)
+enabling laser
+Enable ===>> OK
+begin interval
+BEGIN INTERVAL Interval 1 waiting for 30.0
+block started
+set extract to 4.0
+WaitControl setup for 30.0  
+extract (4.0,) {}
+GetPosition ===>> -9.96950,0.00000,1.00000
+set extraction state FusionsCO2 ON! 4.0(watts) (0.75, 'red', 1.5)
+extract sample to 4.0 (watts)
+set laser output
+SetLaserOutput 4.0,watts ===>> OK
+COMPLETE INTERVAL waiting for Interval 1 to complete
+Get Checksum: 1551197106
+Get Checksum: 1551197106
+Get Checksum: 1551197106
+Get Checksum: 1551197106
+Get Checksum: 1551197106
+Get Checksum: 1551197106
+Get Checksum: 1551197106
+Get Checksum: 1551197106
+Get Checksum: 1551197106
+Get Checksum: 1551197106
+Join finished
+block finished. duration 30.0844068527
+Interval 1 finished
+end_extract () {}
+ending extraction. set laser power to 0
+set laser power 0
+SetLaserPower 0 ===>> OK
+disable () {}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% disable
+set extraction state False (0.75, 'red', 1.5)
+disabling laser
+Disable ===>> OK
+sleep (30.0,) {}
+SLEEP 30.0
+block started
+WaitControl setup for 30.0  
+Get Checksum: 1551197106
+Get Checksum: 1551197106
+Get Checksum: 1551197106
+Get Checksum: 1551197106
+Get Checksum: 1551197106
+Get Checksum: 1551197106
+Get Checksum: 1551197106
+Get Checksum: 1551197106
+Get Checksum: 1551197106
+Get Checksum: 1551197106
+Join finished
+block finished. duration 30.0875809193
+executed 195.0
+jan_co2.py completed successfully
+GetAchievedOutput ===>> No Response
+Requested Output= 0.000
+Achieved Output=  0.000
+GetResponseBlob ===>> No Response
+GetOutputBlob ===>> No Response
+persistence save...
+persistence save - db
+AutomatedRunPersister post_extraction_save deprecated
+persistence save - dvc
+no extraction position for 106
+create new session 4979461008
+close session 4979461008
+Extraction Finished
+14:15:12 -- ******* Extraction Finished *******
+no overlap. not waiting for min ms pumptime
+14:15:12 -- Sending spectrometer configuration
+======== Sending configuration ========
+SetDeflection CDD,50.0 ===>> OK
+SetDeflection H2,0.0 ===>> OK
+SetDeflection H1,0.0 ===>> OK
+SetDeflection L2,825.0 ===>> OK
+SetDeflection L1,400.0 ===>> OK
+SetDeflection AX,190.0 ===>> OK
+SetZFocus 74.64 ===>> OK
+SetZSymmetry -50.72 ===>> OK
+SetExtractionLens 26.13 ===>> OK
+SetIonRepeller -3.81 ===>> OK
+SetElectronEnergy 75.08 ===>> OK
+SetYSymmetry -2.81 ===>> OK
+SetIonCounterVoltage 1590.0 ===>> OK
+send trap current 200.0
+GetParameter Trap Current Readback ===>> 198.035158395898
+SetParameter Trap Current Set,200.0 ===>> OK
+updating mftable name mftable
+Using mftable located at /Users/jan/PychronDev/setupfiles/spectrometer/mftables/mftable.csv
+============ MFtable ===========
+Isotope  H2     H1     AX     L1     L2     CDD    
+Ar40     5.7714 5.8793 5.9925 6.1113 6.2312 6.3396
+Ar39     5.6707 5.7715 5.8849 5.9974 6.1163 6.2261
+Ar36     5.3482 5.4405 5.5483 5.6563 5.7713 5.8772
+================================
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+======== Configuration Finished ========
+GetYSymmetry ===>> -2.81
+GetZSymmetry ===>> -50.72
+GetParameter Trap Current Readback ===>> 198.482695477019
+GetHighVoltage ===>> 4499.94659342336
+start measurement
+do measurement
+L#=65529 analysis type=unknown
+Measurement Started jan_unknown120_60.py
+14:15:13 -- ******* Measurement Started jan_unknown120_60.py *******
+state changed from extraction to measurement
+setting spec, defl, and gains
+GetExtractionLens ===>> 26.13
+GetYSymmetry ===>> -2.81
+GetZSymmetry ===>> -50.72
+GetZFocus ===>> 74.64
+GetDeflection H2 ===>> 0
+GetDeflection H1 ===>> 0
+GetDeflection AX ===>> 190
+GetDeflection L1 ===>> 400
+GetDeflection L2 ===>> 825
+GetDeflection CDD ===>> 50
+GetGain H2 ===>> 0.0113
+GetGain H1 ===>> 0.1
+GetGain AX ===>> 0.097049
+GetGain L1 ===>> 0.010355
+GetGain L2 ===>> 0.095649
+GetGain CDD ===>> 0
+pre measurement save
+New frame /Users/jan/PychronDev/data/isotopes/1e/0a6fca-455c-4b37-8c50-c186eca1ab25.h5
+flush and close file /Users/jan/PychronDev/data/isotopes/1e/0a6fca-455c-4b37-8c50-c186eca1ab25.h5
+testing...
+no interpolation path defined
+executed 226.132928
+unknown measurement script
+activate_detectors ('H2', 'H1', 'AX', 'L1', 'L2', 'CDD') {}
+activate detectors
+*************** Set Analysis View Ar/Ar
+create graphs
+Get Checksum: 1551197106
+clearing graphs
+clear isotope group
+setting isotope det=H2, iso=PM41
+setting isotope det=H1, iso=Ar40
+setting isotope det=AX, iso=Ar39
+setting isotope det=L1, iso=Ar38
+setting isotope det=L2, iso=Ar37
+setting isotope det=CDD, iso=Ar36
+setting previous blanks
+ - setting Ar40 blank 0.228+/-0.007
+ - setting Ar36 blank 0.00424+/-0.00017
+ - setting Ar37 blank 0.039+/-0.006
+ - setting Ar38 blank 0.0140+/-0.0024
+ - setting PM41 blank 0.02+/-0.06
+ - setting Ar39 blank 0.027+/-0.010
+load analysis view
+position_magnet ('Ar40',) {'detector': 'H1'}
+detector Detector(H1)
+POSITION Ar40 H1
+setting detector H2 to PM41 (40.9624)
+setting detector H1 to Ar40 (39.9624)
+setting detector AX to Ar39 (38.9624)
+setting detector L1 to Ar38 (37.9624)
+setting detector L2 to Ar37 (36.9624)
+setting detector CDD to Ar36 (35.9624)
+Mapping mass to dac mass func: "parabolic"
+H1 map mass coeffs = [-0.00063987  0.15840543  0.57086999]
+H1 map mass to dac 39.9624 >> 5.87926
+GetDeflection H1 ===>> 0
+GetHighVoltage ===>> 4499.94659342336
+positioning Ar40 (5.87922537759) on H1
+setting magnet DAC
+current  : 5.879225
+requested: 5.879225
+Delta Dac: 0.000000
+Checking detector protection. dv=0.00000
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87922537759 ===>> OK
+equilibrate () {'delay': 3, 'inlet': 'R', 'outlet': 'O', 'eqtime': 12.0}
+Equilibration Started
+14:15:14 -- ******* Equilibration Started *******
+checking ownership. requestor=129.138.12.150
+check software interlocks O
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel True
+Close O ===>> OK
+GetValveState O ===>> False
+change switch state (True, True)
+update switch state O False args=() kw={} ncanvase=2
+14:15:14 -- CLOSE  VALVE-O (Jan Ion Pump)
+waiting 3s before opening inlet value ('R',)
+Get Checksum: -598318598
+checking ownership. requestor=129.138.12.150
+check software interlocks R
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel True
+Open R ===>> OK
+set states for children of R. state=True
+handle state [('R', True)]
+update switch state R True args=() kw={'refresh': False} ncanvase=2
+refresh_canvas_needed fired
+GetValveState R ===>> OK
+change switch state (True, True)
+update switch state R True args=() kw={} ncanvase=2
+14:15:17 -- OPEN   VALVE-R (Jan Inlet)
+equilibrating for 12.0sec
+set_time_zero () {}
+sniff (12.0,) {}
+py_sniff
+build tables- sniff [Detector(H2), Detector(H1), Detector(AX), Detector(L1), Detector(L2), Detector(CDD)]
+add group /sniff/PM41 (Group) '' table H2
+add group /sniff/Ar40 (Group) '' table H1
+add group /sniff/Ar39 (Group) '' table AX
+add group /sniff/Ar38 (Group) '' table L1
+add group /sniff/Ar37 (Group) '' table L2
+add group /sniff/Ar36 (Group) '' table CDD
+flush and close file /Users/jan/PychronDev/data/isotopes/1e/0a6fca-455c-4b37-8c50-c186eca1ab25.h5
+measuring sniff. ncounts=12.0
+starting measurement
+GetData ===>> H2,-0.197133378537826,H1,0.0137400850253268,AX,-0.0539282810404132,L1,0.00884572879722433,L2,-0.0...
+GetData ===>> H2,0.369180083089571,H1,106.996064229196,AX,81.0674275918927,L1,0.238814500989664,L2,0.5598780365...
+Get Checksum: -1449001502
+GetData ===>> H2,0.851666418945883,H1,439.771891580209,AX,321.259928055757,L1,1.91299888769654,L2,1.31793027052...
+GetData ===>> H2,0.344729964320984,H1,569.825820083219,AX,405.272622432484,L1,3.50423179724161,L2,1.52681865633...
+GetData ===>> H2,0.0370149059852035,H1,612.163708437945,AX,429.087223930442,L1,4.50898156009619,L2,1.5736333673...
+Get Checksum: -1449001502
+GetData ===>> H2,-0.140968833795814,H1,627.583780587707,AX,437.369940499817,L1,4.97682050993322,L2,1.5102706498...
+GetData ===>> H2,-0.00212423417397736,H1,633.743234577703,AX,440.758688321585,L1,5.28122520285936,L2,1.51956706...
+GetData ===>> H2,-0.0453863182642155,H1,636.062566659787,AX,442.255410850947,L1,5.45941635170923,L2,1.523934042...
+Get Checksum: -1449001502
+GetData ===>> H2,-0.213946968160709,H1,636.786597952336,AX,442.845875949546,L1,5.55984121528612,L2,1.5616872417...
+GetData ===>> H2,-0.0676438124294665,H1,638.011227202863,AX,443.064756777779,L1,5.62749794970892,L2,1.438744698...
+Get Checksum: -1449001502
+GetData ===>> H2,-0.187153430199117,H1,638.133295291926,AX,443.077602641955,L1,5.6870193928652,L2,1.55282049777...
+Equilibration Finished
+14:15:29 -- ******* Equilibration Finished *******
+checking ownership. requestor=129.138.12.150
+check software interlocks R
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel True
+GetData ===>> H2,-0.0978674598984789,H1,638.11630910554,AX,443.023942288714,L1,5.73843046695228,L2,1.5134306399...
+Close R ===>> OK
+GetValveState R ===>> False
+change switch state (True, True)
+update switch state R False args=() kw={} ncanvase=2
+14:15:30 -- CLOSE  VALVE-R (Jan Inlet)
+Post Equilibration Started jan_pump_extraction_line.py
+14:15:30 -- ******* Post Equilibration Started jan_pump_extraction_line.py *******
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed 4.0
+executed 4.0
+Pump after analysis
+doing GOSUB
+testing...
+no interpolation path defined
+executed 4.0
+Pump Microbone
+close () {'description': 'Jan Inlet'}
+closing name=--- desc=Jan Inlet
+checking ownership. requestor=129.138.12.150
+check software interlocks R
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel False
+Close R ===>> OK
+GetValveState R ===>> False
+change switch state (True, True)
+update switch state R False args=() kw={} ncanvase=2
+14:15:30 -- CLOSE  VALVE-R (Jan Inlet)
+---------------------------------------- close None (Jan Inlet) result=[(True, True)]
+measurement finished
+estimated time: 12.583 actual time: :12.672
+flush and close file /Users/jan/PychronDev/data/isotopes/1e/0a6fca-455c-4b37-8c50-c186eca1ab25.h5
+set_fits () {}
+using default fits file=/Users/jan/PychronDev/scripts/measurement/fits/nominal_linear.yaml
+set "Ar40" to "('Linear', 'SEM')"
+No fit for "PM41". defaulting to linear. check the measurement script "jan_unknown120_60.py"
+set "PM41" to "linear"
+set "Ar36" to "('Linear', 'SEM')"
+set "Ar37" to "('linear', 'SEM')"
+set "Ar38" to "('linear', 'SEM')"
+set "Ar39" to "('Linear', 'SEM')"
+set_baseline_fits () {}
+using default fits file=/Users/jan/PychronDev/scripts/measurement/fits/nominal_linear.yaml
+set "H1" to "('average', 'SEM')"
+set "H2" to "('average', 'SEM')"
+set "CDD" to "('average', 'SEM')"
+set "L2" to "('average', 'SEM')"
+set "L1" to "('average', 'SEM')"
+set "AX" to "('average', 'SEM')"
+multicollect () {'integration_time': 1, 'ncounts': 120}
+build tables- signal [Detector(H2), Detector(H1), Detector(AX), Detector(L1), Detector(L2), Detector(CDD)]
+add group /signal/PM41 (Group) '' table H2
+add group /signal/Ar40 (Group) '' table H1
+add group /signal/Ar39 (Group) '' table AX
+add group /signal/Ar38 (Group) '' table L1
+add group /signal/Ar37 (Group) '' table L2
+add group /signal/Ar36 (Group) '' table CDD
+flush and close file /Users/jan/PychronDev/data/isotopes/1e/0a6fca-455c-4b37-8c50-c186eca1ab25.h5
+measuring signal. ncounts=120
+action=close, ok=True, locked=[False]
+is_closed ('F',) {}
+is F () closed?
+is closed True
+open () {'description': 'CO2 Laser to Jan'}
+opening name=--- desc=CO2 Laser to Jan
+checking ownership. requestor=129.138.12.150
+check software interlocks A
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open A ===>> OK
+GetValveState A ===>> OK
+change switch state (True, True)
+update switch state A True args=() kw={} ncanvase=2
+14:15:31 -- OPEN   VALVE-A (CO2 Laser to Jan)
+---------------------------------------- open None (CO2 Laser to Jan) result=[(True, True)], time=0.11 sec
+action=open, ok=True, locked=[False]
+sleep (1,) {}
+SLEEP 1.0
+starting measurement
+GetData ===>> H2,-0.10727176473496,H1,638.087334258553,AX,443.252942296589,L1,5.82867074761276,L2,1.53499028209...
+Get Checksum: -598318598
+close () {'description': 'CO2 Laser to Roughing'}
+closing name=--- desc=CO2 Laser to Roughing
+checking ownership. requestor=129.138.12.150
+check software interlocks G
+interlocks []
+actuate state mode=None-script, software_lock=True
+VALVE-G(CO2 Laser to Roughing) software locked
+change switch state (True, False)
+---------------------------------------- close None (CO2 Laser to Roughing) result=[(True, False)]
+action=close, ok=True, locked=[True]
+open () {'description': 'Microbone to Turbo'}
+opening name=--- desc=Microbone to Turbo
+checking ownership. requestor=129.138.12.150
+check software interlocks U
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel True
+GetData ===>> H2,-0.06093578528087,H1,638.161773678198,AX,443.001443697768,L1,5.84331811629016,L2,1.53594425823...
+Open U ===>> OK
+GetValveState U ===>> OK
+change switch state (True, True)
+update switch state U True args=() kw={} ncanvase=2
+14:15:32 -- OPEN   VALVE-U (Microbone to Turbo)
+---------------------------------------- open None (Microbone to Turbo) result=[(True, True)], time=0.18 sec
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Getter NP-10'}
+opening name=--- desc=Microbone to Getter NP-10
+checking ownership. requestor=129.138.12.150
+check software interlocks M
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open M ===>> OK
+GetValveState M ===>> OK
+change switch state (True, True)
+update switch state M True args=() kw={} ncanvase=2
+14:15:32 -- OPEN   VALVE-M (Microbone to Getter NP-10)
+---------------------------------------- open None (Microbone to Getter NP-10) result=[(True, True)], time=0.15 sec
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Getter D-50'}
+opening name=--- desc=Microbone to Getter D-50
+checking ownership. requestor=129.138.12.150
+check software interlocks K
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+GetData ===>> H2,-0.0958429192469503,H1,637.957127047195,AX,442.641942717865,L1,5.82540703816297,L2,1.469671119...
+Open K ===>> OK
+GetValveState K ===>> OK
+change switch state (True, True)
+update switch state K True args=() kw={} ncanvase=2
+14:15:33 -- OPEN   VALVE-K (Microbone to Getter D-50)
+---------------------------------------- open None (Microbone to Getter D-50) result=[(True, True)], time=0.41 sec
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to CO2 Laser'}
+opening name=--- desc=Microbone to CO2 Laser
+checking ownership. requestor=129.138.12.150
+check software interlocks T
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open T ===>> OK
+GetValveState T ===>> OK
+change switch state (True, True)
+update switch state T True args=() kw={} ncanvase=2
+14:15:34 -- OPEN   VALVE-T (Microbone to CO2 Laser)
+---------------------------------------- open None (Microbone to CO2 Laser) result=[(True, True)], time=0.42 sec
+action=open, ok=True, locked=[False]
+GetData ===>> H2,-0.187396172409838,H1,637.626892457645,AX,442.90848910961,L1,5.81648670544786,L2,1.46021873183...
+open () {'description': 'Microbone to Inlet Pipette'}
+opening name=--- desc=Microbone to Inlet Pipette
+checking ownership. requestor=129.138.12.150
+check software interlocks S
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open S ===>> OK
+Get Checksum: -860229079
+GetValveState S ===>> OK
+change switch state (True, True)
+update switch state S True args=() kw={} ncanvase=2
+14:15:34 -- OPEN   VALVE-S (Microbone to Inlet Pipette)
+---------------------------------------- open None (Microbone to Inlet Pipette) result=[(True, True)], time=0.45 sec
+action=open, ok=True, locked=[False]
+sleep (1,) {}
+SLEEP 1.0
+GetData ===>> H2,-0.148187698758162,H1,637.274504655275,AX,442.47963188247,L1,5.83276933321415,L2,1.51699293489...
+set_resource () {'name': 'CO2PumpTimeFlag', 'value': 30}
+Set CO2PumpTimeFlag 30 ===>> OK
+release ('JanCO2Flag',) {}
+release JanCO2Flag
+Set JanCO2Flag 0 ===>> OK
+executed 6.0
+PumpMicrobone.py completed successfully
+gosub finished
+get_resource_value () {'name': 'JanMiniboneFlag'}
+Read JanMiniboneFlag ===>> 0
+Get Resource Value JanMiniboneFlag=0.0
+get resource value 0.0
+get_resource_value () {'name': 'JanMiniboneFlag'}
+Read JanMiniboneFlag ===>> 0
+Get Resource Value JanMiniboneFlag=0.0
+executed 4.0
+jan_pump_extraction_line.py completed successfully
+Post Equilibration Finished
+14:15:36 -- ******* Post Equilibration Finished *******
+GetData ===>> H2,-0.0923048627801022,H1,636.775973769413,AX,442.202911751191,L1,5.84026681740534,L2,1.451800799...
+GetData ===>> H2,-0.121111060381287,H1,636.825256293095,AX,442.024048317075,L1,5.79700560230693,L2,1.4999985247...
+GetData ===>> H2,-0.0797067085045605,H1,636.125467689926,AX,442.079038103145,L1,5.80161858366592,L2,1.577033689...
+GetData ===>> H2,-0.201159810875694,H1,635.969529605169,AX,441.847267906048,L1,5.83787550876954,L2,1.6472955362...
+Get Checksum: -860229079
+GetData ===>> H2,-0.173109160528088,H1,635.705009494044,AX,441.622698696154,L1,5.85238663041772,L2,1.5309101292...
+GetData ===>> H2,-0.232859785660885,H1,635.129080084315,AX,441.425639932651,L1,5.83224799733501,L2,1.4740588130...
+GetData ===>> H2,-0.156699171612077,H1,634.957478869553,AX,440.957386364713,L1,5.80585593586914,L2,1.6461344323...
+Get Checksum: -860229079
+GetData ===>> H2,-0.0964889155441869,H1,634.958524147202,AX,440.774898496807,L1,5.78217537601265,L2,1.503250096...
+GetData ===>> H2,-0.146096686789995,H1,635.053265702609,AX,440.503477901151,L1,5.79341371301435,L2,1.4186300511...
+Get Checksum: -860229079
+GetData ===>> H2,-0.0834430954543359,H1,634.688190619296,AX,440.484702928854,L1,5.75338529044982,L2,1.484408587...
+GetData ===>> H2,-0.109747584665522,H1,634.507935953043,AX,440.375700298373,L1,5.72614258097605,L2,1.4906810224...
+GetData ===>> H2,-0.183437476131095,H1,634.160490694556,AX,440.302545283822,L1,5.69887539879255,L2,1.5501904934...
+Get Checksum: -860229079
+GetData ===>> H2,-0.182613191820504,H1,633.883633975012,AX,440.489850794685,L1,5.71704243133246,L2,1.4752189432...
+GetData ===>> H2,-0.1081768634888,H1,634.051716716326,AX,440.27772258046,L1,5.70418245792984,L2,1.5120402315366...
+GetData ===>> H2,-0.100794619336065,H1,633.832701524874,AX,439.663832742687,L1,5.75164308194003,L2,1.4840869349...
+Get Checksum: -860229079
+GetData ===>> H2,-0.033575820582626,H1,633.380507546546,AX,439.866111192928,L1,5.76767456780947,L2,1.4807900604...
+GetData ===>> H2,-0.128627680550568,H1,632.975756115878,AX,439.676007460551,L1,5.72808485750414,L2,1.5066281714...
+GetData ===>> H2,-0.162937389288384,H1,632.826854352785,AX,439.089639750007,L1,5.72017267791507,L2,1.5424272309...
+Get Checksum: -860229079
+GetData ===>> H2,-0.138462841850502,H1,632.583384665186,AX,439.255731005158,L1,5.72007561656287,L2,1.3609844412...
+14:15:56 -- collecting point 25
+GetData ===>> H2,-0.0820586891387475,H1,632.68444050232,AX,439.203897826098,L1,5.73877426204043,L2,1.5234398742...
+GetData ===>> H2,-0.0989019354147667,H1,632.308801152162,AX,438.872597862613,L1,5.68926200406339,L2,1.527358812...
+Get Checksum: -860229079
+GetData ===>> H2,-0.175781869495744,H1,631.588144837423,AX,438.924105008988,L1,5.68801212740797,L2,1.4766662540...
+GetData ===>> H2,-0.230791250473041,H1,631.550764672264,AX,438.352725444544,L1,5.69908320605236,L2,1.4057276595...
+GetData ===>> H2,-0.183896135356363,H1,631.496683404459,AX,438.411529134821,L1,5.70781258988495,L2,1.4679712295...
+Get Checksum: -860229079
+GetData ===>> H2,-0.226970799574204,H1,631.064974113255,AX,438.058337687736,L1,5.7404717878229,L2,1.51761347714...
+GetData ===>> H2,-0.227140445307602,H1,630.977797701876,AX,438.123575507177,L1,5.66945604896645,L2,1.5205783452...
+GetData ===>> H2,-0.117386738790563,H1,630.57941415485,AX,437.995879549496,L1,5.6805154069131,L2,1.510121271016...
+Get Checksum: -860229079
+GetData ===>> H2,-0.135984690570575,H1,630.728733188285,AX,437.817865646254,L1,5.66383073126511,L2,1.5178892749...
+GetData ===>> H2,-0.186100138421873,H1,630.21697806012,AX,437.693821803492,L1,5.67350816588927,L2,1.43689608788...
+GetData ===>> H2,-0.0882263334946556,H1,630.405970445304,AX,437.811569937067,L1,5.67982165716191,L2,1.529117215...
+Get Checksum: -860229079
+GetData ===>> H2,-0.140474167269508,H1,630.14066506516,AX,437.146188662598,L1,5.68444479519002,L2,1.49627601132...
+GetData ===>> H2,-0.197609451429594,H1,629.743867465478,AX,437.161287581116,L1,5.69763786033797,L2,1.5683378348...
+Get Checksum: -860229079
+GetData ===>> H2,-0.232661965558413,H1,629.230478160997,AX,436.935110371852,L1,5.68709942444977,L2,1.5044105785...
+GetData ===>> H2,-0.292716614383605,H1,629.053104811928,AX,436.892386521747,L1,5.69658204437812,L2,1.4757128643...
+GetData ===>> H2,-0.176948155380041,H1,628.74514549178,AX,436.603244947137,L1,5.63668473040126,L2,1.45259317947...
+Get Checksum: -860229079
+GetData ===>> H2,-0.11693075351707,H1,628.624439069079,AX,436.496146437015,L1,5.62696821298014,L2,1.55664504253...
+GetData ===>> H2,-0.094273144202993,H1,628.372744712173,AX,436.162346625947,L1,5.6838231521893,L2,1.51818805687...
+GetData ===>> H2,-0.206634861381618,H1,628.411754093729,AX,436.094487990998,L1,5.67834352538078,L2,1.4200305926...
+Get Checksum: -860229079
+GetData ===>> H2,-0.134017196487233,H1,627.997522630085,AX,436.218172935889,L1,5.64487264827273,L2,1.4852471859...
+GetData ===>> H2,-0.119164500551246,H1,627.715741550252,AX,435.699744502561,L1,5.67486496946489,L2,1.4862006699...
+GetData ===>> H2,-0.121158401320515,H1,627.465728172715,AX,435.494460164149,L1,5.65301349895001,L2,1.5354500284...
+Get Checksum: -860229079
+GetData ===>> H2,-0.149723293357142,H1,627.18100914544,AX,435.602974261328,L1,5.61412753536186,L2,1.50953524877...
+GetData ===>> H2,-0.272697936686252,H1,626.962770427882,AX,435.258143926472,L1,5.59441848883391,L2,1.4704981043...
+GetData ===>> H2,-0.233305204638608,H1,626.881237084305,AX,434.978452602034,L1,5.58099150256224,L2,1.4347030621...
+Get Checksum: -860229079
+14:16:22 -- collecting point 50
+GetData ===>> H2,-0.197764541671848,H1,626.850826404246,AX,434.932486305763,L1,5.60263182252733,L2,1.4706933655...
+GetData ===>> H2,-0.190850638959033,H1,626.528800056069,AX,434.741000841791,L1,5.61750725302943,L2,1.4246456356...
+GetData ===>> H2,-0.219366440045115,H1,626.121229875122,AX,434.342860405389,L1,5.62872640854815,L2,1.4129362560...
+Get Checksum: -860229079
+GetData ===>> H2,-0.191160707337535,H1,625.957555654963,AX,434.195461335395,L1,5.62138964215283,L2,1.5563579092...
+GetData ===>> H2,-0.152636204110293,H1,625.516541213094,AX,433.922002868471,L1,5.62023094107058,L2,1.4844315625...
+GetData ===>> H2,-0.214232459309029,H1,625.538143512288,AX,434.059997924951,L1,5.62536224575421,L2,1.3957880271...
+Get Checksum: -860229079
+GetData ===>> H2,-0.137421894976494,H1,625.529581190147,AX,433.687202590985,L1,5.64561321165612,L2,1.5056744853...
+GetData ===>> H2,-0.162838825409931,H1,625.279528052869,AX,433.661063892477,L1,5.63258606685056,L2,1.5519935891...
+GetData ===>> H2,-0.209456267504243,H1,624.825044509169,AX,433.650691401384,L1,5.59390157110157,L2,1.4551426193...
+Get Checksum: -860229079
+GetData ===>> H2,-0.232364556028304,H1,624.800607880129,AX,433.658143084173,L1,5.61853835055269,L2,1.4693839741...
+GetData ===>> H2,-0.144815954185491,H1,624.410985917524,AX,433.434472316623,L1,5.61445280427473,L2,1.4765513873...
+Get Checksum: -860229079
+GetData ===>> H2,-0.251338603419909,H1,624.474778599008,AX,433.313848960375,L1,5.59419914138446,L2,1.5320019841...
+GetData ===>> H2,-0.180390967726866,H1,623.860232109027,AX,432.764613802413,L1,5.5651838700373,L2,1.53992382696...
+GetData ===>> H2,-0.0960839871492991,H1,623.600197940881,AX,432.51388789446,L1,5.55439984532986,L2,1.4397895804...
+Get Checksum: -860229079
+GetData ===>> H2,-0.0554741818876792,H1,623.391765131389,AX,432.367831601472,L1,5.57278287023561,L2,1.481456318...
+GetData ===>> H2,-0.123195227320585,H1,623.145330320647,AX,432.310773565299,L1,5.56234305910834,L2,1.5004006566...
+GetData ===>> H2,-0.125790095674964,H1,623.20418659935,AX,432.027029786019,L1,5.58791021552186,L2,1.53369151047...
+Get Checksum: -860229079
+GetData ===>> H2,-0.11551532353972,H1,622.713909068728,AX,432.164148495054,L1,5.5506053606983,L2,1.532082437149...
+GetData ===>> H2,-0.1420945927663,H1,622.35665670674,AX,431.881113990456,L1,5.57778477521172,L2,1.4832368589671...
+GetData ===>> H2,-0.195462244588382,H1,621.926178775972,AX,431.860164382151,L1,5.6031885725741,L2,1.52100354701...
+Get Checksum: -860229079
+GetData ===>> H2,-0.182475580410658,H1,621.90447470431,AX,431.903633580928,L1,5.57911302631945,L2,1.47758519286...
+GetData ===>> H2,-0.148938639954493,H1,621.943376269514,AX,431.769324269889,L1,5.56775875379451,L2,1.4833976835...
+GetData ===>> H2,-0.165938451406311,H1,622.21642639488,AX,431.322793629088,L1,5.5195834327938,L2,1.460345063839...
+Get Checksum: -860229079
+GetData ===>> H2,-0.170810278079989,H1,621.873561853956,AX,431.27048780742,L1,5.58267102521638,L2,1.51417756187...
+GetData ===>> H2,-0.258924673829879,H1,621.651053086066,AX,431.246762798705,L1,5.61134012526413,L2,1.5453900591...
+14:16:49 -- collecting point 75
+GetData ===>> H2,-0.14636146156384,H1,620.9923797743,AX,430.95032202816,L1,5.57985917449033,L2,1.4427405730466,...
+Get Checksum: -860229079
+GetData ===>> H2,-0.131749084114708,H1,620.694423743475,AX,430.77126326718,L1,5.56101552073327,L2,1.50855855294...
+GetData ===>> H2,-0.220700199313887,H1,620.609690188562,AX,430.624718652731,L1,5.56922027956767,L2,1.4014808088...
+GetData ===>> H2,-0.134544599506463,H1,620.428420576356,AX,430.567269642814,L1,5.5512759749888,L2,1.45872572980...
+Get Checksum: -860229079
+GetData ===>> H2,-0.239000186974922,H1,619.912056153835,AX,430.033620210293,L1,5.53388614339022,L2,1.5479280580...
+GetData ===>> H2,-0.198456353120316,H1,619.884146831775,AX,430.149488534822,L1,5.54290346251002,L2,1.5379716762...
+GetData ===>> H2,-0.198375441685056,H1,619.72255412837,AX,429.824734791208,L1,5.57620238983891,L2,1.38687077697...
+Get Checksum: -860229079
+GetData ===>> H2,-0.190485286620012,H1,619.321665972925,AX,429.479025783942,L1,5.55840371755405,L2,1.3767953922...
+GetData ===>> H2,-0.196580407540538,H1,619.227555623359,AX,429.364205388141,L1,5.54953826812791,L2,1.5283931632...
+Get Checksum: -860229079
+GetData ===>> H2,-0.15004470196526,H1,619.240496345997,AX,429.359185052139,L1,5.49689595892878,L2,1.47426556788...
+GetData ===>> H2,-0.194076282672748,H1,618.721003874332,AX,429.11001427594,L1,5.52620517226792,L2,1.50328456646...
+GetData ===>> H2,-0.150353947865612,H1,618.459496324417,AX,429.30273945834,L1,5.53257633591136,L2,1.37703636294...
+Get Checksum: -860229079
+GetData ===>> H2,-0.0770628593379615,H1,618.037054384751,AX,428.808448332769,L1,5.57497092939007,L2,1.558367860...
+GetData ===>> H2,-0.012077739454808,H1,618.196908315432,AX,428.831893906711,L1,5.56282694802739,L2,1.4643303492...
+GetData ===>> H2,-0.00945422910985527,H1,618.111556606627,AX,428.576472840703,L1,5.56882194370166,L2,1.47868793...
+Get Checksum: -860229079
+GetData ===>> H2,-0.094806810777629,H1,617.992042331426,AX,428.691919754289,L1,5.53205306234239,L2,1.4743229998...
+GetData ===>> H2,-0.217035351541025,H1,617.173428605365,AX,428.487520306799,L1,5.51531252808099,L2,1.5461135543...
+GetData ===>> H2,-0.195217775819832,H1,616.828726705715,AX,428.157224001534,L1,5.52022542832368,L2,1.5108336950...
+Get Checksum: -860229079
+GetData ===>> H2,-0.284703537661986,H1,616.777990736411,AX,427.983635530607,L1,5.52737820782322,L2,1.5257958152...
+GetData ===>> H2,-0.207865102555438,H1,616.800533868083,AX,427.977066836004,L1,5.52685055796319,L2,1.3696124469...
+GetData ===>> H2,-0.0347367637000474,H1,616.471143664424,AX,427.741112763149,L1,5.51608359358737,L2,1.491646048...
+Get Checksum: -860229079
+GetData ===>> H2,0.0361184436285806,H1,616.100889843068,AX,427.428124180408,L1,5.49823825820234,L2,1.5022849544...
+GetData ===>> H2,0.0114720054834362,H1,615.841051880539,AX,427.424379270622,L1,5.47556435549043,L2,1.3829919733...
+GetData ===>> H2,-0.0895218654916504,H1,615.716863450029,AX,427.335108038397,L1,5.5156694836502,L2,1.4715318449...
+Get Checksum: -860229079
+GetData ===>> H2,-0.124149948228951,H1,615.263823953928,AX,427.082908793654,L1,5.50973066984571,L2,1.4059342678...
+14:17:15 -- collecting point 100
+GetData ===>> H2,-0.115670948279154,H1,615.223197738755,AX,427.313276076082,L1,5.51023815009771,L2,1.4629291638...
+GetData ===>> H2,-0.0188974020344518,H1,615.063545264111,AX,426.822346664287,L1,5.51126234308644,L2,1.473208825...
+Get Checksum: -860229079
+GetData ===>> H2,-0.0346118491832015,H1,614.830534146894,AX,426.358655489802,L1,5.51948866474614,L2,1.435277147...
+GetData ===>> H2,-0.0632243496436128,H1,614.573102760683,AX,426.137445810581,L1,5.53561907363184,L2,1.502468790...
+GetData ===>> H2,-0.107633001136489,H1,614.903443425857,AX,425.835035210775,L1,5.51267953303433,L2,1.4862351334...
+GetData ===>> H2,-0.111684929514812,H1,614.729972915331,AX,426.169458733995,L1,5.50331858336565,L2,1.5227733257...
+GetData ===>> H2,-0.160726922102066,H1,614.315287954683,AX,426.039258274686,L1,5.48949428374382,L2,1.4075756718...
+Get Checksum: -860229079
+GetData ===>> H2,-0.101708356023588,H1,614.310433769477,AX,425.684944163175,L1,5.50821904797161,L2,1.4610800896...
+GetData ===>> H2,-0.0850386110781746,H1,613.949834488741,AX,425.508926089925,L1,5.497092942855,L2,1.46122939249...
+Get Checksum: -860229079
+GetData ===>> H2,-0.110879434930337,H1,613.268821667643,AX,425.561857448091,L1,5.5116873307535,L2,1.47436894548...
+GetData ===>> H2,-0.108325677007991,H1,613.370376769762,AX,425.572836661349,L1,5.50214073402769,L2,1.5736448547...
+GetData ===>> H2,-0.160289368619883,H1,613.335565065503,AX,425.286127536174,L1,5.51293944462285,L2,1.4446352268...
+Get Checksum: -860229079
+GetData ===>> H2,-0.170099202946621,H1,612.932306044245,AX,424.991218597595,L1,5.50481587619532,L2,1.4949547834...
+GetData ===>> H2,-0.228870417080001,H1,612.783904091547,AX,425.048282970036,L1,5.46401469621867,L2,1.4373553666...
+GetData ===>> H2,-0.219371829288125,H1,612.625991741697,AX,424.667036991695,L1,5.50150067710589,L2,1.4365860759...
+Get Checksum: -860229079
+GetData ===>> H2,-0.185211305095612,H1,611.921117479516,AX,424.733037687021,L1,5.50943108249688,L2,1.4087350020...
+GetData ===>> H2,-0.204723881908214,H1,611.586880438483,AX,424.703583531137,L1,5.49982659815906,L2,1.4002182677...
+GetData ===>> H2,-0.177990151816232,H1,611.25761948633,AX,424.527603940403,L1,5.47936472220119,L2,1.41433671480...
+Get Checksum: -860229079
+GetData ===>> H2,-0.18170789391333,H1,611.692305546715,AX,423.828241325183,L1,5.45350758923453,L2,1.41173095955...
+GetData ===>> H2,-0.167240959281821,H1,611.484799629917,AX,423.653671808894,L1,5.44296411122385,L2,1.5140511592...
+GetData ===>> H2,-0.188051550377828,H1,610.893510745338,AX,423.597813387902,L1,5.45789156071509,L2,1.3908071189...
+Get Checksum: -860229079
+measurement finished
+estimated time: 125.829 actual time: :126.387
+flush and close file /Users/jan/PychronDev/data/isotopes/1e/0a6fca-455c-4b37-8c50-c186eca1ab25.h5
+baselines () {'settling_time': 15.0, 'detector': 'H1', 'mass': 34.2, 'ncounts': 60}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Baseline
+build tables- baseline [Detector(H2), Detector(H1), Detector(AX), Detector(L1), Detector(L2), Detector(CDD)]
+add group baseline table H2
+add group baseline table H1
+add group baseline table AX
+add group baseline table L1
+add group baseline table L2
+add group baseline table CDD
+flush and close file /Users/jan/PychronDev/data/isotopes/1e/0a6fca-455c-4b37-8c50-c186eca1ab25.h5
+detector Detector(H1)
+POSITION 34.2 H1
+Mapping mass to dac mass func: "parabolic"
+H1 map mass coeffs = [-0.00063987  0.15840543  0.57086999]
+H1 map mass to dac 34.2 >> 5.23991599104
+GetDeflection H1 ===>> 0
+GetHighVoltage ===>> 4499.94659342336
+positioning 34.2 (5.23988513367) on H1
+setting magnet DAC
+current  : 5.879225
+requested: 5.239885
+Delta Dac: 0.639340
+Checking detector protection. dv=0.63934
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+ProtectDetector CDD,On ===>> OK
+GetDeflection CDD ===>> 2000
+SetMagnetDAC 5.23988513367 ===>> OK
+Magnet settling time: 0.500
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+Get Checksum: -860229079
+GetMagnetMoving ===>> False
+ProtectDetector CDD,Off ===>> OK
+GetDeflection CDD ===>> 50
+Delaying 15.0s for detectors to settle
+Get Checksum: -860229079
+Get Checksum: -860229079
+Get Checksum: -860229079
+Get Checksum: -860229079
+Get Checksum: -860229079
+Join finished
+measuring baseline. ncounts=60
+starting measurement
+GetData ===>> H2,-0.209504766899333,H1,-0.0796776561907685,AX,-0.0168540698034996,L1,-0.0846052841930337,L2,0.0...
+GetData ===>> H2,-0.208797463451664,H1,0.00967196241112873,AX,-0.0662291133465121,L1,-0.0739923834101447,L2,-0....
+GetData ===>> H2,-0.198016727352826,H1,-0.0311909710522638,AX,-0.15196253410254,L1,-0.0847438781192658,L2,-0.03...
+Get Checksum: -860229079
+GetData ===>> H2,-0.215002710782725,H1,0.0605652199490382,AX,-0.086989762032605,L1,-0.113289794220661,L2,0.0542...
+GetData ===>> H2,-0.181845514654227,H1,0.0757125800564086,AX,-0.0802786800604313,L1,-0.118596267860487,L2,-0.13...
+GetData ===>> H2,-0.151000771187987,H1,-0.00631260744772249,AX,-0.14335963012235,L1,-0.108944420877246,L2,-0.12...
+Get Checksum: -860229079
+GetData ===>> H2,-0.112920812648791,H1,0.0199439920460566,AX,-0.110677687265721,L1,-0.0733350527794404,L2,-0.00...
+GetData ===>> H2,-0.1894821922521,H1,-0.0464536365754718,AX,-0.107885037081821,L1,-0.0651666322023568,L2,0.0701...
+Get Checksum: -860229079
+GetData ===>> H2,-0.178474674495332,H1,-0.0297599768183553,AX,-0.24994945768765,L1,-0.0570980822665267,L2,-0.04...
+GetData ===>> H2,-0.274164968586075,H1,-0.017762670373833,AX,-0.165155267067824,L1,-0.0347934263275309,L2,-0.02...
+GetData ===>> H2,-0.101721892311052,H1,-0.0370697576747457,AX,-0.0809509682015805,L1,-0.0143652605530721,L2,-0....
+Get Checksum: -860229079
+GetData ===>> H2,-0.137681464694951,H1,-0.0262301035612865,AX,-0.0258079097753302,L1,-0.0352320189801653,L2,0.0...
+GetData ===>> H2,-0.210595948299784,H1,0.0225688376811696,AX,0.00791245858855351,L1,-0.0735501415684959,L2,-0.0...
+GetData ===>> H2,-0.122364852346343,H1,-0.110591000395232,AX,-0.0712255200796943,L1,-0.0724794317232045,L2,-0.0...
+Get Checksum: -860229079
+GetData ===>> H2,-0.177210013245112,H1,-0.0526415073097251,AX,-0.0747726972059772,L1,-0.0770083638461398,L2,0.0...
+GetData ===>> H2,-0.275971627463804,H1,0.0777996954029138,AX,-0.130814840932008,L1,-0.0694937466196544,L2,-0.05...
+GetData ===>> H2,-0.239330014681217,H1,0.00182250392419832,AX,-0.215660630807705,L1,-0.0518425006665451,L2,-0.0...
+Get Checksum: -860229079
+GetData ===>> H2,-0.174090271569049,H1,-0.0425428003362647,AX,-0.203888434460926,L1,-0.0590224890163535,L2,-0.0...
+GetData ===>> H2,-0.237314530430332,H1,-0.0476817030102826,AX,0.0146648957730865,L1,-0.0657968641238192,L2,-0.0...
+GetData ===>> H2,-0.217345292749398,H1,-0.059222406617798,AX,0.0809786460477421,L1,-0.0534000083561034,L2,0.070...
+Get Checksum: -860229079
+GetData ===>> H2,-0.253609716407231,H1,0.0263749861003638,AX,0.0292503662348798,L1,0.00128185559297377,L2,0.027...
+GetData ===>> H2,-0.288339470675398,H1,-0.00290118962358292,AX,-0.0547050996705988,L1,-0.0574858655360965,L2,-0...
+GetData ===>> H2,-0.108983138858041,H1,-0.0423758709984011,AX,-0.127003236979836,L1,-0.0671492776105884,L2,0.00...
+Get Checksum: -860229079
+GetData ===>> H2,-0.147013915868668,H1,-0.0422804826803123,AX,-0.137144660067634,L1,-0.00630486363170311,L2,-0....
+14:18:21 -- collecting point 25
+GetData ===>> H2,-0.139377985066555,H1,-0.00751731113848282,AX,-0.0199508926095138,L1,0.0156762597141755,L2,0.0...
+GetData ===>> H2,-0.076408238977189,H1,-0.0360919712647732,AX,-0.0622062978296445,L1,-0.0220185763949151,L2,0.0...
+Get Checksum: -860229079
+GetData ===>> H2,-0.19800054448325,H1,0.0119863579366665,AX,-0.116088943063406,L1,-0.043966331782922,L2,-0.0339...
+GetData ===>> H2,-0.164988133569218,H1,0.0522940509453786,AX,-0.00792260574015084,L1,-0.0459847321639917,L2,0.0...
+GetData ===>> H2,-0.11590370477847,H1,-0.0854224927951062,AX,-0.0616730014435272,L1,-0.0446571348454829,L2,0.02...
+Get Checksum: -860229079
+GetData ===>> H2,-0.183649271082504,H1,-0.00966427186990231,AX,-0.100781378849291,L1,-0.00422367433807442,L2,-0...
+GetData ===>> H2,-0.173937704825987,H1,0.0248358052062915,AX,-0.0382282590871833,L1,-0.0162966932684808,L2,-0.0...
+Get Checksum: -860229079
+GetData ===>> H2,-0.15698016107979,H1,-0.0384410274006928,AX,-0.0715385114983201,L1,0.0244498973749245,L2,-0.01...
+GetData ===>> H2,-0.1969148907879,H1,0.0122368884968306,AX,-0.0828403048309609,L1,0.00399973051125673,L2,0.0371...
+GetData ===>> H2,-0.18401484412878,H1,-0.0877703912277149,AX,-0.0160885478536905,L1,-0.00777283291249254,L2,0.0...
+Get Checksum: -860229079
+GetData ===>> H2,-0.16546330245116,H1,-0.0102248595901021,AX,0.0248408447875159,L1,-0.0190153532424556,L2,0.005...
+GetData ===>> H2,-0.158814526897983,H1,-0.0155204695183596,AX,-0.0406286480265148,L1,-0.0217536574356681,L2,0.0...
+GetData ===>> H2,-0.195416382711491,H1,-0.00915139099275635,AX,-0.0212615032984749,L1,-0.0188211019550993,L2,-0...
+Get Checksum: -860229079
+GetData ===>> H2,-0.201583136776958,H1,-0.0716915470031275,AX,-0.0506354287399998,L1,-0.0231045513311131,L2,-0....
+GetData ===>> H2,-0.248168500584828,H1,-0.0919416484902012,AX,-0.101581000870047,L1,0.0287547943160942,L2,0.047...
+GetData ===>> H2,-0.138584504731068,H1,0.0318398660162924,AX,0.0211973382902593,L1,0.00209209933904083,L2,-0.04...
+Get Checksum: -860229079
+GetData ===>> H2,-0.240085216536894,H1,0.0105905562928889,AX,0.00786605170617683,L1,-0.0269536637442555,L2,-0.0...
+GetData ===>> H2,-0.222832539926952,H1,-0.00447570460482254,AX,-0.119182609323454,L1,-0.0129497931907772,L2,0.0...
+GetData ===>> H2,-0.127801758342337,H1,-0.0511512073324337,AX,-0.0843587021578912,L1,-0.00912547782793214,L2,0....
+Get Checksum: -860229079
+GetData ===>> H2,-0.0523156452176054,H1,0.0147660892675596,AX,-0.0569195784462845,L1,-0.0422804292765269,L2,-0....
+GetData ===>> H2,-0.192007285561179,H1,-0.0227120316856897,AX,-0.121152308115615,L1,-0.040092405393983,L2,-0.01...
+GetData ===>> H2,-0.230041531656452,H1,-0.0528680309632488,AX,0.0521815765848611,L1,-0.0367214134866173,L2,0.06...
+Get Checksum: -860229079
+GetData ===>> H2,-0.131374402959345,H1,-0.00132664987539928,AX,-0.0112401023496658,L1,0.0160113029205383,L2,0.0...
+GetData ===>> H2,-0.173959307321579,H1,0.0192042752521051,AX,-0.0552036516438824,L1,0.00354710061712243,L2,-0.0...
+GetData ===>> H2,-0.151508481389176,H1,-0.0953023635580362,AX,-0.0255527599346714,L1,0.0201984809143203,L2,-0.0...
+Get Checksum: -860229079
+14:18:47 -- collecting point 50
+GetData ===>> H2,-0.212198851001147,H1,-0.130326069821129,AX,-0.0477366989382838,L1,0.00679867197118986,L2,-0.1...
+GetData ===>> H2,-0.214585273315657,H1,0.0105189772460214,AX,-0.103238167612249,L1,-0.0128239375979254,L2,-0.19...
+GetData ===>> H2,-0.184250909011401,H1,-0.0187048568092816,AX,0.00109088427864855,L1,0.0205841346904765,L2,-0.0...
+Get Checksum: -860229079
+GetData ===>> H2,-0.163959432667377,H1,-0.0450228605577195,AX,-0.0396313921779936,L1,0.0020776944366298,L2,0.00...
+GetData ===>> H2,-0.289988483941389,H1,-0.000849511728539909,AX,-0.0772881006604274,L1,-0.00882570518238822,L2,...
+Get Checksum: -860229079
+GetData ===>> H2,-0.263837952516829,H1,-0.0449036282995639,AX,-0.0523166524627139,L1,-0.0144527469219989,L2,0.0...
+GetData ===>> H2,-0.170590348793295,H1,-0.0609629344290539,AX,-0.0511455962496452,L1,-0.00933531336794369,L2,0....
+GetData ===>> H2,-0.222680339432597,H1,0.0158636868428765,AX,-0.0693939204831224,L1,0.00354830120001813,L2,-0.0...
+Get Checksum: -860229079
+GetData ===>> H2,-0.178851211230613,H1,0.0334268848535714,AX,0.000835664585287398,L1,0.0187220799309718,L2,-0.0...
+GetData ===>> H2,-0.116371909796291,H1,-0.0300461773019343,AX,-0.0850773246927296,L1,0.0245364343587702,L2,-0.1...
+GetData ===>> H2,0.0677460917428724,H1,-0.0273391649904252,AX,-0.0995993168669922,L1,0.000880959090526001,L2,0....
+Get Checksum: -860229079
+measurement finished
+estimated time: 62.915 actual time: :63.203
+flush and close file /Users/jan/PychronDev/data/isotopes/1e/0a6fca-455c-4b37-8c50-c186eca1ab25.h5
+activate_detectors ('H1', 'AX', 'CDD') {'peak_center': True}
+peak_center () {'detector': 'H1', 'integration_time': 0.262144, 'isotope': 'Ar40'}
+peak center: mean=612.051400027 threshold=3
+peak center started
+setup peak center. detector=['H1', 'AX', 'CDD'], isotope=Ar40
+VersionedUnpickler [<apptools.sweet_pickle.versioned_unpickler.VersionedUnpickler object at 0x19ac2e9b0>] using Updater [<apptools.sweet_pickle.updater.Updater object at 0x12cb19cb0>]
+VersionedUnpickler [<apptools.sweet_pickle.versioned_unpickler.VersionedUnpickler object at 0x19ac2e9b0>] using Updater [<apptools.sweet_pickle.updater.Updater object at 0x12cb19cb0>]
+VersionedUnpickler [<apptools.sweet_pickle.versioned_unpickler.VersionedUnpickler object at 0x15a3cb7d0>] using Updater [<apptools.sweet_pickle.updater.Updater object at 0x12cb19cb0>]
+setting integration time = 0.524288
+SetIntegrationTime 0.524288 ===>> OK
+Mapping mass to dac mass func: "parabolic"
+H1 map mass coeffs = [-0.00063987  0.15840543  0.57086999]
+H1 map mass to dac 39.9624 >> 5.87926
+GetDeflection H1 ===>> 0
+GetHighVoltage ===>> 4499.94659342336
+do peak center. <pychron.spectrometer.jobs.peak_center.PeakCenter object at 0x12cbfe290>
+doing pc
+starting peak center. center dac= 5.87922537759 step_width=0.001
+width = 0.001
+get scan parameters. half-width=0.015,window=0.015, i=0, scalar=1
+Scan parameters center=5.87923 width=0.03000 (5.86423 - 5.89423)
+GetData ===>> H2,-0.0708905831767915,H1,-0.032109181576012,AX,-0.00351456818397176,L1,-0.0295089386709825,L2,-0...
+Moving to starting dac 5.86422537759
+setting magnet DAC
+current  : 5.239885
+requested: 5.864225
+Delta Dac: 0.624340
+Checking detector protection. dv=0.62434
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+ProtectDetector CDD,On ===>> OK
+GetDeflection CDD ===>> 2000
+SetMagnetDAC 5.86422537759 ===>> OK
+Magnet settling time: 0.500
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> False
+ProtectDetector CDD,Off ===>> OK
+GetDeflection CDD ===>> 50
+Wait until signal near baseline. tol= -0.024081886182. timeout= 10
+GetData ===>> H2,5.66014328642961,H1,2.78561177621215,AX,0.0783424468278215,L1,0.031518011250097,L2,0.072401802...
+GetData ===>> H2,42.6639185236553,H1,47.2713074845295,AX,3.93206884505784,L1,0.092039626787795,L2,-0.0660205643...
+GetData ===>> H2,49.8475631310264,H1,40.159577547092,AX,10.9187981087836,L1,0.0916952681944769,L2,-0.1682188281...
+GetData ===>> H2,27.0197700974847,H1,19.0751953753908,AX,4.91826337358393,L1,0.0977292601888304,L2,-0.217199430...
+GetData ===>> H2,11.2339682818141,H1,9.49351148703437,AX,2.29411441671761,L1,0.0714462177833497,L2,-0.120808296...
+Get Checksum: -860229079
+GetData ===>> H2,3.91079202216922,H1,4.94536412706339,AX,0.994711532537397,L1,0.0568934993741605,L2,0.003416096...
+GetData ===>> H2,1.21132315354058,H1,2.61129043210577,AX,0.460443115871752,L1,0.0462617193116512,L2,-0.14049529...
+GetData ===>> H2,0.331402553374656,H1,1.56352380566436,AX,0.300762997702605,L1,0.027656926115717,L2,0.000273283...
+GetData ===>> H2,0.13582920902872,H1,0.942641632884,AX,0.207032028367504,L1,0.0301459193421611,L2,-0.0307849136...
+GetData ===>> H2,0.20572374217889,H1,0.756521583700409,AX,0.28355172233922,L1,0.00288199969426254,L2,0.02293573...
+GetData ===>> H2,0.247782016132084,H1,0.609668775977901,AX,0.210350659386744,L1,-0.00257401120352959,L2,-0.0144...
+Get Checksum: -860229079
+GetData ===>> H2,0.220606071082366,H1,0.420335431193686,AX,0.222999625071656,L1,0.0311263092334304,L2,-0.058305...
+GetData ===>> H2,0.115010808650259,H1,0.447861810460748,AX,0.17378233652499,L1,0.0399517036479375,L2,0.07030507...
+GetData ===>> H2,0.0877476744841168,H1,0.418613788787181,AX,0.168794701382972,L1,0.0181390727815145,L2,-0.03463...
+GetData ===>> H2,0.143223261110381,H1,0.375152108583232,AX,0.0975110313410112,L1,0.0283728091081423,L2,-0.03285...
+GetData ===>> H2,0.0923229043720884,H1,0.496606687371837,AX,0.253178100121726,L1,0.00845756742977793,L2,0.09540...
+Get Checksum: -860229079
+GetData ===>> H2,-0.00241499367387459,H1,0.40352677017832,AX,0.157498071984907,L1,0.00390007815181176,L2,-0.002...
+GetData ===>> H2,-0.125254673760291,H1,0.487101034126458,AX,0.0626534391887712,L1,-0.00292436227085904,L2,0.071...
+GetData ===>> H2,-0.179746857739744,H1,0.463054319193712,AX,0.188421940214709,L1,0.00176319253634061,L2,0.13429...
+GetData ===>> H2,-0.16018943119542,H1,0.449727468270633,AX,0.185428878799082,L1,0.00514218357007287,L2,-0.03998...
+GetData ===>> H2,-0.193425335442987,H1,0.467519360834001,AX,0.171624863010656,L1,-0.00813259664337192,L2,0.1006...
+Peak center failed to move to a baseline position
+_do_sweep sm= 5.86422537759, em= 5.89422537759, stm= 0.001
+calculated step values: start=5.86422537759, end=5.89422537759, width=0.001, nsteps=31.0
+setting magnet DAC
+current  : 5.864225
+requested: 5.864225
+Delta Dac: 0.000000
+Checking detector protection. dv=0.00000
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.86422537759 ===>> OK
+GetData ===>> H2,-0.193425335442987,H1,0.467519360834001,AX,0.171624863010656,L1,-0.00813259664337192,L2,0.1006...
+setting magnet DAC
+current  : 5.864225
+requested: 5.865260
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.86525986035 ===>> OK
+Magnet settling time: 1.049
+Get Checksum: -860229079
+GetData ===>> H2,-0.130353677410668,H1,1.11116765838866,AX,0.516217808821862,L1,-0.0172087773241752,L2,-0.08324...
+setting magnet DAC
+current  : 5.865260
+requested: 5.866294
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.86629434311 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.072025513795827,H1,4.01281804521239,AX,1.95771370502527,L1,0.0120162864927408,L2,-0.1512257...
+setting magnet DAC
+current  : 5.866294
+requested: 5.867329
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.86732882587 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.0511090724566839,H1,15.995296417764,AX,6.88169436454337,L1,0.0535229936495754,L2,0.05020612...
+setting magnet DAC
+current  : 5.867329
+requested: 5.868363
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.86836330862 ===>> OK
+Magnet settling time: 1.049
+Get Checksum: -860229079
+GetData ===>> H2,-0.0855925195802359,H1,52.7736126663011,AX,23.5655185538755,L1,0.087118579629672,L2,0.00858602...
+setting magnet DAC
+current  : 5.868363
+requested: 5.869398
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.86939779138 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.209190864353112,H1,139.424704695533,AX,68.4754248422935,L1,0.33842466180062,L2,-0.046378518...
+setting magnet DAC
+current  : 5.869398
+requested: 5.870432
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87043227414 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.118532709952962,H1,276.372301379558,AX,150.715255700212,L1,0.923455237923312,L2,0.110880430...
+setting magnet DAC
+current  : 5.870432
+requested: 5.871467
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.8714667569 ===>> OK
+Magnet settling time: 1.049
+Get Checksum: -860229079
+GetData ===>> H2,-0.0795319163334177,H1,417.12322795418,AX,247.887004299798,L1,1.85645918898907,L2,0.3486347407...
+setting magnet DAC
+current  : 5.871467
+requested: 5.872501
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87250123966 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.164083637733606,H1,516.689785107044,AX,330.00302437255,L1,2.86934792062456,L2,0.70447968649...
+setting magnet DAC
+current  : 5.872501
+requested: 5.873536
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87353572242 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.157317879587881,H1,564.044766643042,AX,376.943964605007,L1,3.71499910297972,L2,0.9981508654...
+setting magnet DAC
+current  : 5.873536
+requested: 5.874570
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87457020518 ===>> OK
+Magnet settling time: 1.049
+Get Checksum: -860229079
+GetData ===>> H2,-0.156734295676489,H1,583.16577692215,AX,400.792591436577,L1,4.52787505425012,L2,1.29221009455...
+setting magnet DAC
+current  : 5.874570
+requested: 5.875605
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87560468793 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.122019971923122,H1,585.278654033711,AX,403.311808154147,L1,4.89215775357812,L2,1.3593679907...
+setting magnet DAC
+current  : 5.875605
+requested: 5.876639
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87663917069 ===>> OK
+Magnet settling time: 1.049
+Get Checksum: -860229079
+GetData ===>> H2,-0.216714043267772,H1,586.182276842696,AX,403.703029018099,L1,5.00092940322904,L2,1.3026763787...
+setting magnet DAC
+current  : 5.876639
+requested: 5.877674
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87767365345 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.155029302042732,H1,585.779176414142,AX,403.469819739866,L1,5.0946546908486,L2,1.64185801195...
+setting magnet DAC
+current  : 5.877674
+requested: 5.878708
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87870813621 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.101494024195539,H1,585.509058324356,AX,404.155004421994,L1,5.16892026060478,L2,1.3154164832...
+setting magnet DAC
+current  : 5.878708
+requested: 5.879743
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87974261897 ===>> OK
+Magnet settling time: 1.049
+Get Checksum: -860229079
+GetData ===>> H2,-0.189945304992085,H1,585.305984657133,AX,403.823626718219,L1,5.20151655136386,L2,1.4229335182...
+setting magnet DAC
+current  : 5.879743
+requested: 5.880777
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.88077710173 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.138543514515628,H1,585.946879014055,AX,403.922580226372,L1,5.28441912541247,L2,1.5168220833...
+setting magnet DAC
+current  : 5.880777
+requested: 5.881812
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.88181158449 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.138527308205616,H1,585.138878827675,AX,403.369173027185,L1,5.28904560248404,L2,1.4332336136...
+setting magnet DAC
+current  : 5.881812
+requested: 5.882846
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.88284606724 ===>> OK
+Magnet settling time: 1.049
+Get Checksum: -860229079
+GetData ===>> H2,-0.163605710779998,H1,583.95097766793,AX,402.046787793442,L1,5.28452817818736,L2,1.28266289763...
+setting magnet DAC
+current  : 5.882846
+requested: 5.883881
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.88388055 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.258228521935455,H1,580.467793699383,AX,396.718795525974,L1,5.23191649827217,L2,1.3621647256...
+setting magnet DAC
+current  : 5.883881
+requested: 5.884915
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.88491503276 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.202724959178238,H1,566.985837375763,AX,380.147560153502,L1,4.99999512117137,L2,1.1404850414...
+setting magnet DAC
+current  : 5.884915
+requested: 5.885950
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.88594951552 ===>> OK
+Magnet settling time: 1.049
+Get Checksum: -860229079
+GetData ===>> H2,-0.354872668588037,H1,527.741512053969,AX,336.619958247538,L1,4.57283732582519,L2,0.8128485226...
+setting magnet DAC
+current  : 5.885950
+requested: 5.886984
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.88698399828 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.306926574575685,H1,382.86536414415,AX,205.266215854752,L1,3.11982540749703,L2,0.40198685456...
+setting magnet DAC
+current  : 5.886984
+requested: 5.888018
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.88801848104 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.281055485923331,H1,228.089054590288,AX,103.799609645831,L1,2.0787050889812,L2,0.20696214837...
+setting magnet DAC
+current  : 5.888018
+requested: 5.889053
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+Get Checksum: -860229079
+SetMagnetDAC 5.8890529638 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.241777169980369,H1,94.1435729644761,AX,35.0908564953007,L1,1.10838655115109,L2,0.0495453465...
+setting magnet DAC
+current  : 5.889053
+requested: 5.890087
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.89008744655 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.209349837547067,H1,34.6644001235326,AX,10.7671013471074,L1,0.685210103043996,L2,0.034075331...
+setting magnet DAC
+current  : 5.890087
+requested: 5.891122
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.89112192931 ===>> OK
+Magnet settling time: 1.049
+Get Checksum: -860229079
+GetData ===>> H2,-0.151085654192899,H1,10.3046892827324,AX,2.31014845108346,L1,0.474747305306616,L2,-0.07280216...
+setting magnet DAC
+current  : 5.891122
+requested: 5.892156
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.89215641207 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.142011132299617,H1,2.4899277488512,AX,0.275121396651981,L1,0.293476808132535,L2,-0.05964815...
+setting magnet DAC
+current  : 5.892156
+requested: 5.893191
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.89319089483 ===>> OK
+Magnet settling time: 1.049
+GetData ===>> H2,-0.139532055645672,H1,0.435329316335609,AX,-0.125636120752528,L1,0.175169735980569,L2,-0.12928...
+setting magnet DAC
+current  : 5.893191
+requested: 5.894225
+Delta Dac: 0.001034
+Checking detector protection. dv=0.00103
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.89422537759 ===>> OK
+Magnet settling time: 1.049
+Get Checksum: -860229079
+GetData ===>> H2,-0.211982000985609,H1,-0.00783935818395849,AX,-0.28777177437035,L1,0.0807764634980374,L2,-0.03...
+result of _do_sweep=True
+result of _calculate_peak_center=([5.8716263865035483, 5.8791434896754087, 5.8866605928472691], [432.48720571127615, 586.17904557673558, 428.15730617607153], 5.8766474631395784, 586.17904557673558)
+Failed to find a valid peak. No peak greater than 1.0. max = 0.0303435430755
+new center pos Detector(H1) (Ar40) @ 5.87914348968
+GetHighVoltage ===>> 4499.94659342336
+GetDeflection H1 ===>> 0
+dac uncorrected for HV and deflection 5.8791781116
+update mftable H1 Ar40 5.8791781116 message=automated run peakcenter
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+add to repo msg=modified - automated run peakcenter
+locally archiving mftable
+setting magnet DAC
+current  : 5.894225
+requested: 5.879143
+Delta Dac: 0.015082
+Checking detector protection. dv=0.01508
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+SetMagnetDAC 5.87914348968 ===>> OK
+Magnet settling time: 0.500
+sweep finished
+setting integration time = 1.048576
+SetIntegrationTime 1.048576 ===>> OK
+Failed to find a valid peak. No peak greater than 1.0. max = 0.0303351898748
+flush and close file /Users/jan/PychronDev/data/isotopes/1e/0a6fca-455c-4b37-8c50-c186eca1ab25.h5
+finished measure script
+executed 226.132928
+jan_unknown120_60.py completed successfully
+Measurement Finished
+14:19:45 -- ******* Measurement Finished *******
+Post Measurement Started jan_pump_ms.py
+14:19:45 -- ******* Post Measurement Started jan_pump_ms.py *******
+testing...
+no interpolation path defined
+executed 0
+Pumping spectrometer
+open () {'name': 'O'}
+opening name=O desc=---
+checking ownership. requestor=129.138.12.150
+check software interlocks O
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel True
+Open O ===>> OK
+GetValveState O ===>> OK
+change switch state (True, True)
+update switch state O True args=() kw={} ncanvase=2
+14:19:46 -- OPEN   VALVE-O (Jan Ion Pump)
+---------------------------------------- open O () result=[(True, True)], time=0.13 sec
+action=open, ok=True, locked=[False]
+executed 0
+jan_pump_ms.py completed successfully
+setting _ms_pumptime
+Post Measurement Finished
+14:19:46 -- ******* Post Measurement Finished *******
+$$$$$$$$$$$$$$$$$$$$ state at run end measurement
+state changed from measurement to success
+post measurement save measured=True aborted=False
+Set filtering
+setting fod for Ar40= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for H1= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for PM41= {'filter_outliers': False, 'std_devs': 2, 'iterations': 1}
+setting fod for H2= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for Ar36= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for CDD= {'filter_outliers': True, 'std_devs': 10, 'iterations': 1}
+setting fod for Ar37= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for L2= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for Ar38= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for L1= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for Ar39= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+setting fod for AX= {'filter_outliers': True, 'std_devs': 2, 'iterations': 1}
+persistence save...
+persistence save - db
+post measurement save
+6889067824 connecting to database sqlite:////Users/jan/PychronDev/.appdata/local_lab.db
+connected to db sqlite:////Users/jan/PychronDev/.appdata/local_lab.db
+create new session 6889067824
+close session 6889067824
+No database instance. Not saving post measurement to isotopedb database
+$$$$$$$$$$$$$$$ auto_save_detector_ic=False
+massspec enabled True
+create new session 4975538832
+MassSpec Database Version: 16.0
+close session 4975538832
+saving post measurement to secondary database
+saving to massspec database 129.138.12.160/massspecdata
+setting labnumber to 65529
+setting aliquot to 5
+setting step to 
+setting uuid to 1e0a6fca-455c-4b37-8c50-c186eca1ab25
+setting irradpos to 65529
+setting extract_device to Fusions CO2
+setting tray to 
+setting position to 106
+setting power_requested to 4.0
+setting extract_value to 4.0
+setting duration to 30.0
+setting duration_at_request to 30.0
+setting first_stage_delay to 30.0
+setting cleanup to 30.0
+setting comment to F:39
+setting irradiation to NM-289
+setting level to F
+setting irradiation_level to F
+setting sample to Bode Hills
+setting material to Sanidine
+setting project to timescale
+setting mass_spectrometer to Jan
+no attribute chron_dosages
+no attribute production_ratios
+no attribute interference_corrections
+no attribute production_name
+no attribute j
+Reference Isotope=Ar40
+Reference Detector=H1
+%%%%%%%%%%%%%%%%%%%% Comment: F:39 %%%%%%%%%%%%%%%%%%%
+adding isotope PM41 H2
+add baseline dbdet= PM41. original det= H2
+get baseline data PM41 H2
+Get data baseline <pychron.processing.isotope.Baseline object at 0x199c12cd0> len t=60
+baseline PM41. v=-0.186136445177, e=0.00640339759972
+get signal data PM41 H2
+Get data signal PM41 0.03+/-0.06 len t=120
+adding isotope Ar40 H1
+add baseline dbdet= Ar40. original det= H1
+get baseline data Ar40 H1
+Get data baseline <pychron.processing.isotope.Baseline object at 0x199c12e90> len t=60
+baseline Ar40. v=-0.0197266947005, e=0.00489813902408
+get signal data Ar40 H1
+Get data signal Ar40 640.79+/-0.05 len t=120
+adding isotope Ar39 AX
+add baseline dbdet= Ar39. original det= AX
+get baseline data Ar39 AX
+Get data baseline <pychron.processing.isotope.Baseline object at 0x199c1d090> len t=60
+baseline Ar39. v=-0.0600435506933, e=0.00676215911548
+get signal data Ar39 AX
+Get data signal Ar39 445.15+/-0.04 len t=120
+adding isotope Ar38 L1
+add baseline dbdet= Ar38. original det= L1
+get baseline data Ar38 L1
+Get data baseline <pychron.processing.isotope.Baseline object at 0x199c1d250> len t=60
+baseline Ar38. v=-0.0256996719335, e=0.004299302061
+get signal data Ar38 L1
+Get data signal Ar38 5.851+/-0.006 len t=120
+adding isotope Ar37 L2
+add baseline dbdet= Ar37. original det= L2
+get baseline data Ar37 L2
+Get data baseline <pychron.processing.isotope.Baseline object at 0x199c1d410> len t=60
+baseline Ar37. v=-0.0152780469418, e=0.00679673854898
+get signal data Ar37 L2
+Get data signal Ar37 1.532+/-0.010 len t=120
+adding isotope Ar36 CDD
+Get Checksum: -1965264452
+add baseline dbdet= Ar36. original det= CDD
+get baseline data Ar36 CDD
+Get data baseline <pychron.processing.isotope.Baseline object at 0x199c1d5d0> len t=60
+baseline Ar36. v=0.000280363195497, e=2.32275727327e-05
+get signal data Ar36 CDD
+Get data signal Ar36 0.0179+/-0.0004 len t=120
+65529-05 added analysis time 0.555076122284s
+analysis added to mass spec database
+mass spec save time= 0.566
+persistence save - dvc
+================= post measurement started
+create new session 4979461008
+close session 4979461008
+---------------- Experiment Queue saving disabled
+DVC saving peakcenter
+Failed to find a valid peak. No peak greater than 1.0. max = 0.0303351898748
+Smart pull ahead: 0 behind: 0
+Up-to-date with origin
+add to repo msg=modified - ad8224ebc6dbfeb9f5997218dfa5fe690569839d.json
+add to repo msg=modified - 29-05.json
+add to repo msg=modified - 29-05.dat.json
+add to repo msg=modified - 29-05.blan.json
+add to repo msg=modified - 29-05.inte.json
+add to repo msg=modified - 29-05.icfa.json
+add to repo msg=modified - 29-05.base.json
+not at valid file /Users/jan/PychronDev/data/.dvc/repositories/Timescale/655/tags/29-05.tags.json
+add to repo msg=modified - 29-05.peak.json
+add to repo msg=modified - 29-05.extr.json
+not at valid file /Users/jan/PychronDev/data/.dvc/repositories/Timescale/655/monitor/29-05.moni.json
+commit message=<COLLECTION>
+Get Checksum: -1965264452
+add to repo msg=modified - 29-05.inte.json
+add to repo msg=modified - 29-05.base.json
+commit message=<ISOEVO> default collection fits
+add to repo msg=modified - 29-05.blan.json
+commit message=<BLANKS> preceding bc-02-J-219
+add to repo msg=modified - 29-05.icfa.json
+commit message=<ICFactor> default
+Get Checksum: -1965264452
+push repository <pychron.git_archive.repo_manager.GitRepoManager object at 0x198dca590>
+pushing to remote=origin, url=https://github.com
+Get Checksum: -1965264452
+no changes to meta repo
+create new session 4979461008
+add association Timescale
+get identifier "65529"
+setting analysis irradiation position=<pychron.dvc.dvc_orm.IrradiationPositionTbl object at 0x12b7adc10>
+close session 4979461008
+================= post measurement finished
+14:19:58 -- ******* Post Run Check *******
+loading queue conditionals post_run_actions
+loading system conditionals post_run_actions
+loading conditionals from /Users/jan/PychronDev/setupfiles/spectrometer/default_conditionals.yaml
+loading queue conditionals post_run_terminations
+loading system conditionals post_run_terminations
+loading conditionals from /Users/jan/PychronDev/setupfiles/spectrometer/default_conditionals.yaml
+Checking default post run terminations n=1
+GetDeflection CDD ===>> 50
+testing CDD==2000
+evaluate ot="CDD.deflection==2000" t="CDD==2000", ctx="{'CDD': 50.0}"
+14:19:58 -- ******* Post Run Check Passed *******
+14:19:58 -- Automated run 65529-05 success duration: 364.488 s
+----------------- finish -----------------
+----------------- stop -----------------
+retroactive repository identifiers disabled
+finish run. runs completed=138
+update duration runid=65529-05, duration=364.488284111, md5=3be28e4d
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed 213.652928
+script duration name:unknown120_60 seconds:214.0
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed 0
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed 0
+calculate duration
+testing...
+no interpolation path defined
+executed 0
+executed 0.0
+script duration name:co2 seconds:0.0
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed 4.0
+executed 4.0
+Script duration 214.0
+Run total estimated duration= 215.000
+unknown120_60 in script context. using previous estimated duration
+script duration name:unknown120_60 seconds:214.0
+pump_ms in script context. using previous estimated duration
+co2 in script context. using previous estimated duration
+script duration name:co2 seconds:0.0
+pump_extraction_line in script context. using previous estimated duration
+Script duration 214.0
+Run total estimated duration= 215.000
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed 556.052928
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+unknown400_120 in script context. using previous estimated duration
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_cocktail_x1.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed 0
+calculate duration
+testing...
+no interpolation path defined
+executed 0
+calculate duration
+testing...
+no interpolation path defined
+executed 32.0
+calculate duration
+testing...
+no interpolation path defined
+executed 34.0
+calculate duration
+testing...
+no interpolation path defined
+executed 4.0
+calculate duration
+testing...
+no interpolation path defined
+executed 38.0
+executed 108.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+loading script "jan_unknown400_120.py"
+loading script "jan_pump_ms.py"
+loading script "jan_sniffair_x2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed 0
+calculate duration
+testing...
+no interpolation path defined
+executed 0
+calculate duration
+testing...
+no interpolation path defined
+executed 32.0
+calculate duration
+testing...
+no interpolation path defined
+executed 34.0
+calculate duration
+testing...
+no interpolation path defined
+executed 4.0
+calculate duration
+testing...
+no interpolation path defined
+executed 36.0
+calculate duration
+testing...
+no interpolation path defined
+executed 34.0
+calculate duration
+testing...
+no interpolation path defined
+executed 4.0
+calculate duration
+testing...
+no interpolation path defined
+executed 36.0
+calculate duration
+testing...
+no interpolation path defined
+executed 70.0
+executed 250.0
+script duration name:sniffair_x2 seconds:250.0
+Script duration 806.0
+Run total estimated duration= 807.000
+script duration name:unknown400_120 seconds:556.0
+sniffair_x2 in script context. using previous estimated duration
+script duration name:sniffair_x2 seconds:250.0
+Script duration 806.0
+Run total estimated duration= 807.000
+script duration name:unknown400_120 seconds:556.0
+cocktail_x1 in script context. using previous estimated duration
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+loading script "jan_ic_peak_hop3.py"
+loading script "jan_pump_ms.py"
+loading script "jan_air_x1.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed 133.8
+script duration name:ic_peak_hop3 seconds:134.0
+loading script "jan_ic_peak_hop3.py"
+loading script "jan_pump_ms.py"
+loading script "jan_air_x1.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed 0
+calculate duration
+testing...
+no interpolation path defined
+executed 0
+calculate duration
+testing...
+no interpolation path defined
+executed 32.0
+calculate duration
+testing...
+no interpolation path defined
+executed 34.0
+calculate duration
+testing...
+no interpolation path defined
+executed 4.0
+calculate duration
+testing...
+no interpolation path defined
+executed 36.0
+executed 106.0
+script duration name:air_x1 seconds:106.0
+Script duration 240.0
+Run total estimated duration= 241.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:sniffair_x2 seconds:250.0
+Script duration 806.0
+Run total estimated duration= 807.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:sniffair_x2 seconds:250.0
+Script duration 806.0
+Run total estimated duration= 807.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+ic_peak_hop3 in script context. using previous estimated duration
+script duration name:ic_peak_hop3 seconds:134.0
+air_x1 in script context. using previous estimated duration
+script duration name:air_x1 seconds:106.0
+Script duration 240.0
+Run total estimated duration= 241.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:sniffair_x2 seconds:250.0
+Script duration 806.0
+Run total estimated duration= 807.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:sniffair_x2 seconds:250.0
+Script duration 806.0
+Run total estimated duration= 807.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+script duration name:ic_peak_hop3 seconds:134.0
+script duration name:air_x1 seconds:106.0
+Script duration 240.0
+Run total estimated duration= 241.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:sniffair_x2 seconds:250.0
+Script duration 806.0
+Run total estimated duration= 807.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:sniffair_x2 seconds:250.0
+Script duration 806.0
+Run total estimated duration= 807.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+script duration name:ic_peak_hop3 seconds:134.0
+script duration name:air_x1 seconds:106.0
+Script duration 240.0
+Run total estimated duration= 241.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:sniffair_x2 seconds:250.0
+Script duration 806.0
+Run total estimated duration= 807.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:sniffair_x2 seconds:250.0
+Script duration 806.0
+Run total estimated duration= 807.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+script duration name:ic_peak_hop3 seconds:134.0
+script duration name:air_x1 seconds:106.0
+Script duration 240.0
+Run total estimated duration= 241.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:ic_peak_hop3 seconds:134.0
+script duration name:air_x1 seconds:106.0
+Script duration 240.0
+Run total estimated duration= 241.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:co2 seconds:0.0
+Script duration 556.0
+Run total estimated duration= 557.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+script duration name:unknown400_120 seconds:556.0
+script duration name:cocktail_x1 seconds:108.0
+Script duration 664.0
+Run total estimated duration= 665.000
+script duration name:ic_peak_hop3 seconds:134.0
+script duration name:air_x1 seconds:106.0
+Script duration 240.0
+Run total estimated duration= 241.000
+nruns=146 before=5.0, run_dur=83086.0, btw=8700.0
+write rem/ex queues
+/Users/jan/PychronDev/experiments/rem/CurrentExperiment.rem.txt
+/Users/jan/PychronDev/experiments/rem/CurrentExperiment.ex.txt
+doing event level: 3
